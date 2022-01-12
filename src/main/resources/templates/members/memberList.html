@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--$기호는 모델 안의 값을 꺼내는 것이다. 아래는 thymeleaf문법이다. members는 리스트가 들어갔기 때문에 반복문을 돈다. -->
+            <tr th:each="member : ${members}">
+                <!--member의 멤버들은 전부 private이라서 접근이 안된다. 프로퍼티 접근 방식이라고 해서 .id라고 적었지만 getId()를 호출해서 가져온다.-->
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

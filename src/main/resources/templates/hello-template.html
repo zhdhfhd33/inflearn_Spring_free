@@ -1,0 +1,7 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!--html을 바꾸는 것이기 때문에 thymeleaf엔진을 사용해야한다.-->
+<body>
+<p th:text="'hello ' + ${name}">hello! empty</p>
+<!--로컬에서 보면 hello! empty가 보임. 하지만 서버를 통해서 보면 템플릿 엔진이 hello! empty를 치환해서 바꾼다. 이를 구분하기 위한 값-->
+</body>
+</html>
